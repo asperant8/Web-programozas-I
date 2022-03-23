@@ -23,7 +23,7 @@
 					<?php foreach ($pages as $url => $page) { ?>
 						<?php if(! isset($_SESSION['login']) && $page['menun'][0] || isset($_SESSION['login']) && $page['menun'][1]) { ?>
 							<li class="nav-item">
-							<a <?= (($page == $request) ? ' class="active nav-link"' : 'nav-link') ?> href="<?= ($url == '/') ? '.' : ('?page=' . $url) ?>">
+							<a <?= (($page == $request) ? ' class="active nav-link"' : 'class="nav-link"') ?> href="<?= ($url == '/') ? '.' : ('?page=' . $url) ?>">
 							<?= $page['content'] ?></a>
 							</li>
 						<?php } ?>

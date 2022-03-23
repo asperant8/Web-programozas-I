@@ -18,13 +18,11 @@ body{
     width: 100%;
     align-items: center;
     margin: auto;
-    color: white !important;
 }
 
 .nav-item{
     margin: 0.5rem;
     background-color:rgb(0, 53, 109);
-    color: white !important;
 }
 .nav-link{
     color: white !important;
@@ -33,7 +31,8 @@ body{
     text-decoration: none;
 }
 .nav-link.active{
-    color: green !important
+    color: rgb(255, 255, 255) !important;
+    border:1px solid white !important;
 }
 
 .header {
@@ -72,5 +71,6 @@ footer {
   border-radius: 10px;
   margin: 10px;
   padding: 5px 20px;
-  background-color: #cc99ff;
+  background-color: rgb(0, 53, 109);
+  color: rgb(189, 189, 189);
 }
