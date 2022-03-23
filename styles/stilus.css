@@ -1,62 +1,78 @@
-body{
-    background-color: rgb(43, 43, 43) !important;
+body {
+  background-color: rgb(43, 43, 43) !important;
 }
 
 .headerImg {
   /* Create the parallax scrolling effect */
- /*  background-attachment: fixed;
+  /*  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; */
+  width: 100%;
+}
+.headerRow {
   width: auto;
 }
-.headerRow{
-    width: auto;
+
+.nav {
+  width: 100%;
+  margin: auto;
+  background-color: rgb(0, 36, 84);
 }
 
-.nav{
-    width: 100%;
-    align-items: center;
-    margin: auto;
+.nav-item {
+  position:relative;
+  margin: 0.5rem auto  0.5rem auto;
+  float: left;
+  border-radius: 3px;
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgb(0, 80, 165);
+  border: none;
+  border-bottom: 5px solid rgb(0, 61, 122);
+  text-shadow: 0px -2px rgb(0, 109, 226);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
 }
 
-.nav-item{
-    margin: 0.5rem;
-    background-color:rgb(0, 53, 109);
+
+.nav-item:hover{
+  -webkit-transform: translate(0px,5px);
+  -ms-transform: translate(0px,5px);
+  transform: translate(0px,5px);
+  border-bottom: 1px solid rgb(0, 61, 122);
 }
-.nav-link{
-    color: white !important;
-    list-style: none;
-    text-emphasis: none;
-    text-decoration: none;
+
+.nav-link {
+  color: white !important;
+  list-style: none;
+  text-emphasis: none;
+  text-decoration: none;
 }
-.nav-link.active{
-    color: rgb(255, 255, 255) !important;
-    border:1px solid white !important;
+.nav-link.active {
+ font-weight: bold;
 }
 
 .header {
   background-color: rgb(0, 36, 84);
 }
 .header-left {
-    background:linear-gradient(to left, rgb(0, 36, 84), rgb(43, 43, 43));
+  background: linear-gradient(to left, rgb(0, 36, 84), rgb(43, 43, 43));
 }
 .header-right {
-    background:linear-gradient(to right, rgb(0, 36, 84), rgb(43, 43, 43));
+  background: linear-gradient(to right, rgb(0, 36, 84), rgb(43, 43, 43));
 }
 
-div#wrapper {  
-  width: 100%; 
+div#wrapper {
+  width: 100%;
   color: white !important;
 }
-
-
 
 div#content {
   background-color: rgb(43, 43, 43);
   color: white;
 }
-  
 
 div#content img {
   float: right;
@@ -68,8 +84,8 @@ div#content img {
 }
 
 footer {
-  border-radius: 10px;
-  margin: 10px;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   padding: 5px 20px;
   background-color: rgb(0, 53, 109);
   color: rgb(189, 189, 189);
