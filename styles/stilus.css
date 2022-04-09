@@ -80,13 +80,77 @@ div#content img {
   height: auto;
   margin: 0 0 15px 15px;
   padding: 3px;
-  border: 3px solid blue;
 }
 
-footer {
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  padding: 5px 20px;
-  background-color: rgb(0, 53, 109);
-  color: rgb(189, 189, 189);
+
+.originalPageLink{
+  color: lightgrey;
+  text-decoration: none; 
+  border: 2px dashed lightgrey;
+  padding: 0.4em;
+  border-radius: 6%;
+}
+.originalPageLink:hover{
+  color: rgb(169, 169, 255);
+  border: 2px dashed rgb(169, 169, 255);
+}
+
+#whoweare{
+  box-shadow: 0px 0px 8px 0px black;
+  background-color: rgb(48, 48, 48);
+  border-radius: 1%;
+  padding: 1em;
+  margin-top: 0.3rem;
+}
+#whoweare h2{
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#carousel img{
+  box-shadow: 0px 0px 8px 0px black;
+  background-color: rgb(48, 48, 48);
+  border-radius: 2%;
+}
+img{
+  filter:brightness(70%);
+  filter:contrast(80%);
+  filter:saturate(70%);
+  filter:sepia(30%);
+}
+
+.dogs-col{
+  box-shadow: 0px 0px 8px 0px black;
+  background-color: rgb(48, 48, 48);
+  border-radius: 1%;
+  padding: 1em;
+  margin-top: 0.3rem;
+  margin-right: 1em;
+}
+
+.cats-col{
+  margin-left: 1em;
+  box-shadow: 0px 0px 8px 0px black;
+  background-color: rgb(48, 48, 48);
+  border-radius: 1%;
+  padding: 1em;
+  margin-top: 0.3rem;
+}
+
+.animals-col img{
+  max-width: 100%;
+  min-width: 100%;
+  border-radius: 1em;
+  border: 3px solid rgb(0, 36, 84);
+}
+.animals-col a{
+  text-decoration: none;
+}
+
+.cardbox{
+  box-shadow: 0px 0px 8px 0px black;
+  background-color: rgb(48, 48, 48);
+  border-radius: 1%;
+  padding: 1em;
+  margin-top: 0.3rem;
+  margin-bottom:1rem;
 }
