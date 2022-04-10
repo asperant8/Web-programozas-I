@@ -1,40 +1,40 @@
 <?php
-if(isset($_POST['felhasznalo']) && isset($_POST['jelszo']) && isset($_POST['vezeteknev']) && isset($_POST['utonev'])) {
+if(isset($_POST['username']) && isset($_POST['password']) && isset($_POST['lastName']) && isset($_POST['firstName'])) {
     try {
         // Kapcsolódás
-        $dbh = new PDO('mysql:host=localhost;dbname=gyakorlat7', 'root', '',
+        $dbh = new PDO('mysql:host=localhost;dbname=lostdogandcat', 'root', '',
                         array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
         $dbh->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
         
         // Létezik már a felhasználói név?
-        $sqlSelect = "select id from felhasznalok where bejelentkezes = :bejelentkezes";
+        $sqlSelect = "select id from users where login = :login";
         $sth = $dbh->prepare($sqlSelect);
-        $sth->execute(array(':bejelentkezes' => $_POST['felhasznalo']));
+        $sth->execute(array(':login' => $_POST['username']));
         if($row = $sth->fetch(PDO::FETCH_ASSOC)) {
-            $uzenet = "A felhasználói név már foglalt!";
-            $ujra = "true";
+            $responseMsg = "The username is already in use!";
+            $retry = "true";
         }
         else {
             // Ha nem létezik, akkor regisztráljuk
-            $sqlInsert = "insert into felhasznalok(id, csaladi_nev, uto_nev, bejelentkezes, jelszo)
-                          values(0, :csaladinev, :utonev, :bejelentkezes, :jelszo)";
+            $sqlInsert = "insert into users(id, lastName, firstName, login, password)
+                          values(0, :lastName, :firstName, :login, :password)";
             $stmt = $dbh->prepare($sqlInsert); 
-            $stmt->execute(array(':csaladinev' => $_POST['vezeteknev'], ':utonev' => $_POST['utonev'],
-                                 ':bejelentkezes' => $_POST['felhasznalo'], ':jelszo' => sha1($_POST['jelszo']))); 
+            $stmt->execute(array(':lastName' => $_POST['lastName'], ':firstName' => $_POST['firstName'],
+                                 ':login' => $_POST['username'], ':password' => sha1($_POST['password']))); 
             if($count = $stmt->rowCount()) {
                 $newid = $dbh->lastInsertId();
-                $uzenet = "A regisztrációja sikeres.<br>Azonosítója: {$newid}";                     
-                $ujra = false;
+                $responseMsg = "Successful registration! <br>Id: {$newid}";                     
+                $retry = false;
             }
             else {
-                $uzenet = "A regisztráció nem sikerült.";
-                $ujra = true;
+                $responseMsg = "The registration is failed!";
+                $retry = true;
             }
         }
     }
     catch (PDOException $e) {
-        $uzenet = "Hiba: ".$e->getMessage();
-        $ujra = true;
+        $responseMsg = "Error: ".$e->getMessage();
+        $retry = true;
     }      
 }
 else {

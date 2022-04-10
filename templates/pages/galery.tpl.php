@@ -22,21 +22,20 @@ closedir($reader);
 </head>
 
 <body>
-    <h1>Gallery</h1>
     <div class="row">
         <?
         arsort($images);
         foreach ($images as $file => $date) {
         ?>
-            <div class="col align-items-center text-center cardbox" style="margin: 0.5em;">
+            <div class="col align-items-center text-center cardbox" style="margin: 0.5em; margin-top:1.2em;">
                 <div class="row">
                     <a href="<? echo $directory . $file ?>">
                         <img src="<? echo $directory . $file ?>">
                     </a>
                 </div>
                 <div class="row">
-                    <p>Név: <? echo $file; ?></p>
-                    <p>Dátum: <? echo date($gallery['dateformat'], $date); ?></p>
+                    <p>File name: <? echo $file; ?></p>
+                    <p>Date: <? echo date($gallery['dateformat'], $date); ?></p>
                 </div>
             </div>
         <?php

@@ -1,18 +1,18 @@
 <?php
-if(isset($_POST['felhasznalo']) && isset($_POST['jelszo'])) {
+if(isset($_POST['username']) && isset($_POST['password'])) {
     try {
         // Kapcsolódás
-        $dbh = new PDO('mysql:host=localhost;dbname=gyakorlat7', 'root', '',
+        $dbh = new PDO('mysql:host=localhost;dbname=lostdogandcat', 'root', '',
                         array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
         $dbh->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
         
         // Felhsználó keresése
-        $sqlSelect = "select id, csaladi_nev, uto_nev from felhasznalok where bejelentkezes = :bejelentkezes and jelszo = sha1(:jelszo)";
+        $sqlSelect = "select id, lastName, firstName from users where login = :login and password = sha1(:password)";
         $sth = $dbh->prepare($sqlSelect);
-        $sth->execute(array(':bejelentkezes' => $_POST['felhasznalo'], ':jelszo' => $_POST['jelszo']));
+        $sth->execute(array(':login' => $_POST['username'], ':password' => $_POST['password']));
         $row = $sth->fetch(PDO::FETCH_ASSOC);
         if($row) {
-            $_SESSION['csn'] = $row['csaladi_nev']; $_SESSION['un'] = $row['uto_nev']; $_SESSION['login'] = $_POST['felhasznalo'];
+            $_SESSION['lastName'] = $row['lastName']; $_SESSION['firstName'] = $row['firstName']; $_SESSION['login'] = $_POST['username'];
         }
     }
     catch (PDOException $e) {

@@ -21,7 +21,7 @@
 	<div class="container">
 		<header>
 			<div class="text-center ">
-				<? if (isset($_SESSION['login'])) { ?>Logged in: <strong><?= $_SESSION['csn'] . " " . $_SESSION['un'] . " (" . $_SESSION['login'] . ")" ?></strong><? } ?>
+				<? if (isset($_SESSION['login'])) { ?>Logged in: <strong><?= $_SESSION['username'] . " " . $_SESSION['lastName'] . " (" . $_SESSION['login'] . ")" ?></strong><? } ?>
 			<img class="headerImg img-fluid" src="./images/<?= $header['img'] ?>" alt="<?= $header['imgalt'] ?>">
 			</div>
 		</header>
@@ -40,7 +40,7 @@
 		<div id="content">
 			<? include("./templates/pages/{$request['file']}.tpl.php"); ?>
 		</div>
-		<footer style="text-align: center; margin-top:1em;" class="cardbox text-center row">
+		<footer style="text-align: center; margin-top:1em;" class="cardbox text-center">
 			<div class="col" style="color:lightgrey;">
 				<? if (isset($footer['copyright'])) { ?>&copy;&nbsp;<?= $footer['copyright'] ?> <? } ?>
 			&nbsp;

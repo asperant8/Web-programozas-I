@@ -1,6 +1,6 @@
 <?php
 $data = $_SESSION;
-unset($_SESSION["csn"]);
-unset($_SESSION["un"]);
+unset($_SESSION["lastName"]);
+unset($_SESSION["firstName"]);
 unset($_SESSION["login"]);
 ?>

@@ -10,6 +10,7 @@ body {
   background-size: cover; */
   width: 100%;
 }
+
 .headerRow {
   width: auto;
 }
@@ -21,8 +22,8 @@ body {
 }
 
 .nav-item {
-  position:relative;
-  margin: 0.5rem auto  0.5rem auto;
+  position: relative;
+  margin: 0.5rem auto 0.5rem auto;
   float: left;
   border-radius: 3px;
   font-size: 1rem;
@@ -37,10 +38,10 @@ body {
 }
 
 
-.nav-item:hover{
-  -webkit-transform: translate(0px,5px);
-  -ms-transform: translate(0px,5px);
-  transform: translate(0px,5px);
+.nav-item:hover {
+  -webkit-transform: translate(0px, 5px);
+  -ms-transform: translate(0px, 5px);
+  transform: translate(0px, 5px);
   border-bottom: 1px solid rgb(0, 61, 122);
 }
 
@@ -50,16 +51,43 @@ body {
   text-emphasis: none;
   text-decoration: none;
 }
+
 .nav-link.active {
- font-weight: bold;
+  font-weight: bold;
+}
+
+.formButton {
+  position: relative;
+  margin: 0.5rem auto 0.5rem auto;
+  border-radius: 3px;
+  font-size: 1rem;
+  color: #fff;
+  text-decoration: none;
+  background-color: rgb(0, 80, 165);
+  border: none;
+  border-bottom: 5px solid rgb(0, 61, 122);
+  text-shadow: 0px -2px rgb(0, 109, 226);
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+  width: 6em;
+  height: 2.5em;
+}
+
+.formButton:hover {
+  -webkit-transform: translate(0px, 5px);
+  -ms-transform: translate(0px, 5px);
+  transform: translate(0px, 5px);
+  border-bottom: 1px solid rgb(0, 61, 122);
 }
 
 .header {
   background-color: rgb(0, 36, 84);
 }
+
 .header-left {
   background: linear-gradient(to left, rgb(0, 36, 84), rgb(43, 43, 43));
 }
+
 .header-right {
   background: linear-gradient(to right, rgb(0, 36, 84), rgb(43, 43, 43));
 }
@@ -83,42 +111,45 @@ div#content img {
 }
 
 
-.originalPageLink{
+.originalPageLink {
   color: lightgrey;
-  text-decoration: none; 
+  text-decoration: none;
   border: 2px dashed lightgrey;
   padding: 0.4em;
   border-radius: 6%;
 }
-.originalPageLink:hover{
+
+.originalPageLink:hover {
   color: rgb(169, 169, 255);
   border: 2px dashed rgb(169, 169, 255);
 }
 
-#whoweare{
+#whoweare {
   box-shadow: 0px 0px 8px 0px black;
   background-color: rgb(48, 48, 48);
   border-radius: 1%;
   padding: 1em;
   margin-top: 0.3rem;
 }
-#whoweare h2{
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+#whoweare h2 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-#carousel img{
+#carousel img {
   box-shadow: 0px 0px 8px 0px black;
   background-color: rgb(48, 48, 48);
   border-radius: 2%;
 }
-img{
-  filter:brightness(70%);
-  filter:contrast(80%);
-  filter:saturate(70%);
-  filter:sepia(30%);
+
+img {
+  filter: brightness(70%);
+  filter: contrast(80%);
+  filter: saturate(70%);
+  filter: sepia(30%);
 }
 
-.dogs-col{
+.dogs-col {
   box-shadow: 0px 0px 8px 0px black;
   background-color: rgb(48, 48, 48);
   border-radius: 1%;
@@ -127,7 +158,7 @@ img{
   margin-right: 1em;
 }
 
-.cats-col{
+.cats-col {
   margin-left: 1em;
   box-shadow: 0px 0px 8px 0px black;
   background-color: rgb(48, 48, 48);
@@ -136,21 +167,29 @@ img{
   margin-top: 0.3rem;
 }
 
-.animals-col img{
+.animals-col img {
   max-width: 100%;
   min-width: 100%;
   border-radius: 1em;
   border: 3px solid rgb(0, 36, 84);
 }
-.animals-col a{
+
+.animals-col a {
   text-decoration: none;
 }
 
-.cardbox{
+.cardbox {
   box-shadow: 0px 0px 8px 0px black;
   background-color: rgb(48, 48, 48);
   border-radius: 1%;
   padding: 1em;
   margin-top: 0.3rem;
-  margin-bottom:1rem;
+  margin-bottom: 1rem;
+}
+
+.error{
+  border: 3px solid red !important;
+}
+.approve{
+  border: 3px solid green !important;
 }
