@@ -1,6 +1,6 @@
-<? session_start(); ?>
-<? if (file_exists('./logicals/' . $request['file'] . '.')) {
-	include("./logicals/{$request['file']}.");
+<? session_start();?>
+<? if (file_exists('./logicals/' . $request['file'] . '.php')) {
+	include("./logicals/{$request['file']}.php");
 } ?>
 <!DOCTYPE html>
 <html>
@@ -21,14 +21,14 @@
 	<div class="container">
 		<header>
 			<div class="text-center ">
-				<? if (isset($_SESSION['login'])) { ?>Logged in: <strong><?= $_SESSION['username'] . " " . $_SESSION['lastName'] . " (" . $_SESSION['login'] . ")" ?></strong><? } ?>
+				<? if (isset($_SESSION['username'])) { ?> <div style="color:White;">Logged in: <strong><? print_r( $_SESSION['firstname'] . " " . $_SESSION['lastname'] . " (" . $_SESSION['username'] . ")") ?></strong></div> <? } ?>
 			<img class="headerImg img-fluid" src="./images/<?= $header['img'] ?>" alt="<?= $header['imgalt'] ?>">
 			</div>
 		</header>
 		<div id="wrapper text-center">
 			<ul style="border-radius: 0 0 1em 1em;" class="nav text-center">
 				<? foreach ($pages as $url => $page) { ?>
-					<? if (!isset($_SESSION['login']) && $page['menun'][0] || isset($_SESSION['login']) && $page['menun'][1]) { ?>
+					<? if (!isset($_SESSION['username']) && $page['menun'][0] || isset($_SESSION['username']) && $page['menun'][1]) { ?>
 						<li class="nav-item">
 							<a <?= (($page == $request) ? ' class="active nav-link"' : 'class="nav-link"') ?> href="<?= ($url == '/') ? '.' : ('?page=' . $url) ?>">
 								<?= $page['content'] ?></a>

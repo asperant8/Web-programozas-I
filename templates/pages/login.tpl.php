@@ -1,22 +1,14 @@
-<div class="cardbox" style="margin-top: 1.2em;">
-  <div class="row">
-    <div class="col text-center">
-      <button class="formButton"><a class="link" href="?page=log_in">Log in</a></button>
+<? if (isset($_SESSION['username'])) { ?>
+    <div class="cardbox">
+        <h1>
+            You are successfully logged in!
+        </h1>
+        <p>Username: <? print_r($_SESSION['username']) ?></p>
     </div>
-    <div class="col text-center">
-    <button class="formButton"><a class="link" href="?page=registration">Registration</a></button>
+<? } else { ?>
+    <div class="cardbox">
+        <h1>The log in attempt was unsuccessful!</h1>
+        <p>Wrong username and/or password!</p>
     </div>
-  </div>
-</div>
-
-<style>
-  .link{
-    text-decoration: none;
-    color: white;
-  }
-  .link:hover{
-    text-decoration: none;
-    color: white;
-  }
-
-</style>
+<?
+} ?>

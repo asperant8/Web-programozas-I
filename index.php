@@ -2,6 +2,7 @@
 include('./includes/config.inc.php');
 
 $request = $pages['/'];
+
 if (isset($_GET['page'])) {
 	if (isset($pages[$_GET['page']]) && file_exists("./templates/pages/{$pages[$_GET['page']]['file']}.tpl.php")) {
 		$request = $pages[$_GET['page']];
@@ -12,5 +13,4 @@ if (isset($_GET['page'])) {
 	}
 }
 
-include('./templates/index.tpl.php'); 
-?>
+include('./templates/index.tpl.php');
