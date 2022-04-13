@@ -21,11 +21,12 @@ $pages = array(
     'contactus' => array('file' => 'contactus', 'content' => 'Contact Us', 'menun' => array(1,1)),
 	'message' => array('file' => 'message', 'content' => 'Message', 'menun' => array(0,0)),
     'account' => array('file' => 'account', 'content' => 'Account', 'menun' => array(1,0)),
-    'logout' => array('file' => 'logout', 'content' => 'Kilépés', 'menun' => array(0,1)),
+    'logout' => array('file' => 'logout', 'content' => 'Log out', 'menun' => array(0,1)),
     'log_in_page' => array('file' => 'log_in_page', 'content' => '', 'menun' => array(0,0)),
     'registration' => array('file' => 'registration', 'content' => '', 'menun' => array(0,0)),
     'login' => array('file' => 'login', 'content' => '', 'menun' => array(0,0)),
-    'registrate' => array('file' => 'registrate', 'content' => '', 'menun' => array(0,0))
+    'registrate' => array('file' => 'registrate', 'content' => '', 'menun' => array(0,0)),
+    'upload' => array('file' => 'upload', 'content'=> '', 'menun' => array(0,0))
 );
 
 $gallery = array(

@@ -1,3 +1,5 @@
-<h2>
-    bdfb
-</h2>
+<div class="cardbox">
+    <h2>
+        <? print_r($responseMsg) ?>
+    </h2>
+</div>

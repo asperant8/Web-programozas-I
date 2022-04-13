@@ -3,7 +3,7 @@
         <h1>
             You are successfully logged in!
         </h1>
-        <p>Username: <? print_r($_SESSION['username']) ?></p>
+        <p>Welcome  <? print_r($_SESSION['firstname']) ?></p>
     </div>
 <? } else { ?>
     <div class="cardbox">
