@@ -1,6 +1,6 @@
 <?
 $saveMessage = false;
-$responseMsg = [];
+$responseMsg = array();
 $everythingSet = false;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -47,8 +47,8 @@ if ($saveMessage == true) {
 
     try {
         $dbh = new PDO(
-            'mysql:host=localhost;dbname=lostdogandcat',
-            'lostdogandcat',
+            'mysql:host=localhost;dbname=a20i86webprog',
+            'a20i86webprog',
             'a20i86',
             array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)
         );
@@ -111,7 +111,7 @@ function validateEmail($email)
 
 function validatePhone($phone)
 {
-    $phone = str_replace(['+', ' ', '.', '-', '(', ')'], '', $phone);
+    $phone = str_replace(array('+', ' ', '.', '-', '(', ')'), '', $phone);
 
     if (strlen($phone) > 10 && ctype_digit($phone)) {
         $phoneErr = "";

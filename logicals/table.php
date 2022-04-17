@@ -1,8 +1,8 @@
 <?
 try {
     $dbh = new PDO(
-        'mysql:host=localhost;dbname=lostdogandcat',
-        'lostdogandcat',
+        'mysql:host=localhost;dbname=a20i86webprog',
+        'a20i86webprog',
         'a20i86',
         array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION)
     );
@@ -13,7 +13,7 @@ try {
     $sth = $dbh->prepare($sqlSelect);
     $sth->execute();
 
-    $rows = [];
+    $rows = array();
     while($row = $sth->fetch(PDO::FETCH_ASSOC)){
         array_push($rows,$row);
     }
