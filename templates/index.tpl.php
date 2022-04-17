@@ -21,7 +21,7 @@
 	<div class="container">
 		<header>
 			<div class="text-center ">
-				<? if (isset($_SESSION['username'])) { ?> <div style="color:White;">Logged in: <strong><? print_r( $_SESSION['firstname'] . " " . $_SESSION['lastname'] . " (" . $_SESSION['username'] . ")") ?></strong></div> <? } ?>
+			<? if (isset($_SESSION['username'])) { ?> <div class="text-end" style="color:White; background-color:rgb(0, 39, 71);"><span style="margin-right:1em;">Logged in as <strong><? print_r( $_SESSION['firstname'] . " " . $_SESSION['lastname'] . " (" . $_SESSION['username'] . ")") ?></strong></span></div> <? } ?>
 			<img class="headerImg img-fluid" src="./images/<?= $header['img'] ?>" alt="<?= $header['imgalt'] ?>">
 			</div>
 		</header>

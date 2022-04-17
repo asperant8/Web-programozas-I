@@ -1,10 +1,10 @@
 <div class="cardbox" style="margin-top: 1.2em;">
   <div class="row">
     <div class="col text-center">
-      <button class="formButton"><a class="link" href="?page=log_in_page">Log in</a></button>
+    <a class="link" href="?page=log_in_page"><button class="formButton">Log in</button></a>
     </div>
     <div class="col text-center">
-    <button class="formButton"><a class="link" href="?page=registration">Registration</a></button>
+    <a class="link" href="?page=registration"><button class="formButton">Registration</button></a>
     </div>
   </div>
 </div>

@@ -1,4 +1,6 @@
 <?
+$upload_response = false;
+
 if (isset($_FILES['image'])) {
 
     $image = $_FILES['image']['name'];
@@ -9,13 +11,11 @@ if (isset($_FILES['image'])) {
     $path_file = $directory.$filename.".".$ext;
 
     if (file_exists($path_file)) {
-        echo "Sorry, file already exists.";
+        $upload_response =false;
         }else{
         move_uploaded_file($temp_name,$path_file);
-        echo "Congratulations! File Uploaded Successfully.";
+        $upload_response = true;
         }
        }
 
-
-print_r("asdasd");
 ?>

@@ -19,7 +19,7 @@ $pages = array(
 	'about' => array('file' => 'about', 'content' => 'About', 'menun' => array(1,1)),
 	'galery' => array('file' => 'galery', 'content' => 'Gallery', 'menun' => array(1,1)),
     'contactus' => array('file' => 'contactus', 'content' => 'Contact Us', 'menun' => array(1,1)),
-	'message' => array('file' => 'message', 'content' => 'Message', 'menun' => array(0,0)),
+	'message' => array('file' => 'message', 'content' => '', 'menun' => array(0,0)),
     'account' => array('file' => 'account', 'content' => 'Account', 'menun' => array(1,0)),
     'logout' => array('file' => 'logout', 'content' => 'Log out', 'menun' => array(0,1)),
     'log_in_page' => array('file' => 'log_in_page', 'content' => '', 'menun' => array(0,0)),

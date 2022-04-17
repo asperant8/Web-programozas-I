@@ -27,5 +27,3 @@
 
 
 <p>At Lost Dog we like pets AND people and we hope to make the adoption process positive and fun for adopters and volunteers alike.</p></div>
-
-<? $_SESSION['username'] ?>

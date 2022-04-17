@@ -13,7 +13,7 @@ closedir($reader);
 
 ?>
 <? if (isset($_SESSION['username'])) { ?>
-    <div class="cardbox">
+    <div style="margin-top: 1em;" class="cardbox">
         <div class="row text-center">
             <h3>Authorized users can upload pictures.</h3>
         </div>

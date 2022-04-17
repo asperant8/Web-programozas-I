@@ -4,28 +4,32 @@ function carousel() {
   })
 }
 
-const nameRegexp = /^(([A-Za-z]+[\-\']?)*([A-Za-z]+)?\s)+([A-Za-z]+[\-\']?)*([A-Za-z]+)?$/;
+const nameRegexp = /^(?=.{1,50}$)[a-z]+(?:['_.\s][a-z]+)*$/i;
 
 function checkFirstName() {
   let firstName = document.getElementById("firstName");
   if (firstName.value.match(nameRegexp)) {
-    firstName.className = "form-control bg-dark error"
-  } else {
     firstName.className = "form-control bg-dark approve"
+    document.getElementById("firstnamespan").innerHTML="";
+  } else {
+    firstName.className = "form-control bg-dark error"
+    document.getElementById("firstnamespan").innerHTML="Names can only contain letters!";
   }
 
-  submitable()
+  authorizeForm()
 }
 
 function checkLastName() {
   let lastName = document.getElementById("lastName");
   if (lastName.value.match(nameRegexp)) {
-    lastName.className = "form-control bg-dark error"
-  } else {
     lastName.className = "form-control bg-dark approve"
+    document.getElementById("lastnamespan").innerText="";
+  } else {
+    lastName.className = "form-control bg-dark error"
+    document.getElementById("lastnamespan").innerText="Names can only contain letters!";
   }
 
-  submitable()
+  authorizeForm()
 }
 
 function checkEmail() {
@@ -33,11 +37,13 @@ function checkEmail() {
   let email = document.getElementById("email");
   if (!(email.value.match(emailRegexp))) {
     email.className = "form-control bg-dark error"
+    document.getElementById("emailspan").innerHTML="Email addresss must contain a '@' sign and a '.(domain)' e.g.: .com at the end!"
   } else {
     email.className = "form-control bg-dark approve"
+    document.getElementById("emailspan").innerHTML=""
   }
 
-  submitable()
+  authorizeForm()
 }
 
 function checkPhone() {
@@ -45,30 +51,34 @@ function checkPhone() {
   let phone = document.getElementById("phone");
   if (phone.value.length < 11 || !phone.value.match(phoneRegex)) {
     phone.className = "form-control bg-dark error"
+    document.getElementById("phonespan").innerHTML="Phone numbers must be 11 digit long and be in any format that a phone number usually in!"
   } else {
     phone.className = "form-control bg-dark approve"
+    document.getElementById("phonespan").innerHTML=""
   }
 
-  submitable()
+  authorizeForm()
 }
 
 function checkMessage() {
   let message = document.getElementById("message");
   if (message.value.length < 11) {
     message.className = "form-control bg-dark error"
+    document.getElementById("messagespan").innerHTML="The message must be at least 11 characters long!"
   } else {
     message.className = "form-control bg-dark approve"
+    document.getElementById("messagespan").innerHTML=""
   }
 
-  submitable()
+  authorizeForm()
 }
 
-function submitable(){
+function authorizeForm(){
   const d = document.getElementsByClassName("error")
   if(d.length>0){
-    document.getElementById('submit').disabled = true
+    document.getElementById('submit').style.border="2px solid red";
   }
   else{
-    document.getElementById('submit').disabled = false
+    document.getElementById('submit').style.border="";
   }
 }
