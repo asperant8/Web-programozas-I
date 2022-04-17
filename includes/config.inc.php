@@ -19,6 +19,7 @@ $pages = array(
 	'about' => array('file' => 'about', 'content' => 'About', 'menun' => array(1,1)),
 	'galery' => array('file' => 'galery', 'content' => 'Gallery', 'menun' => array(1,1)),
     'contactus' => array('file' => 'contactus', 'content' => 'Contact Us', 'menun' => array(1,1)),
+    'table' => array('file' => 'table', 'content'=> 'Table', 'menun' => array(1,1)),
 	'message' => array('file' => 'message', 'content' => '', 'menun' => array(0,0)),
     'account' => array('file' => 'account', 'content' => 'Account', 'menun' => array(1,0)),
     'logout' => array('file' => 'logout', 'content' => 'Log out', 'menun' => array(0,1)),
@@ -26,7 +27,7 @@ $pages = array(
     'registration' => array('file' => 'registration', 'content' => '', 'menun' => array(0,0)),
     'login' => array('file' => 'login', 'content' => '', 'menun' => array(0,0)),
     'registrate' => array('file' => 'registrate', 'content' => '', 'menun' => array(0,0)),
-    'upload' => array('file' => 'upload', 'content'=> '', 'menun' => array(0,0))
+    'upload' => array('file' => 'upload', 'content'=> '', 'menun' => array(0,0)),
 );
 
 $gallery = array(
